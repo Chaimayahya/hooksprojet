@@ -1,13 +1,17 @@
 import Card from 'react-bootstrap/Card';
 import Rating from '@mui/material/Rating';
+import { useState } from 'react';
 const CardMovie=({el})=>{
+
+  const [showMore, setShowMore] = useState(false);
     return(
     <Card className='cart' style={{ width: '18rem' }}>
       <Card.Img className="image" variant="top" src={el.posterURL} />
       <Card.Body className='cart'>
         <Card.Title>{el.title}</Card.Title>
         <Card.Text>
-         {el.description}
+        {showMore ? el.description : `${el.description.substring(0, 80)}`}
+                  <a className={showMore ? 'red' : 'green'}  onClick={()=>setShowMore(!showMore)}>{showMore ? 'Show less' : 'Show more'}</a> 
         </Card.Text>
 
         <Rating name="read-only" value={el.rating} readOnly />

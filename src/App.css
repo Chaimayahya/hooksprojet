@@ -16,10 +16,16 @@ flex-wrap: wrap;
   display: flex;
   padding: 20px;
   padding-right: 20px;
+  align-items: center;
+  justify-content: center;
 }
 .searchadd{
+  padding-left: 62px;
+  padding-right: 87px;
+  padding-top: 30px;
+  padding-bottom: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .div{ 
@@ -30,4 +36,12 @@ flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
+.body{
+  padding-left: 30px;
+  padding-right: 30px;
+}
 
+
+.filtre button{
+  background-color:gray;
+}

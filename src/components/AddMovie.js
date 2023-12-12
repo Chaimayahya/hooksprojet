@@ -16,7 +16,7 @@ const AddMovie=({setMovies,movies})=>{
     const handleAdd =()=> setMovies([...movies,{title,description,posterURL,rating,id : Math.random()}])
     return(
         <div>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="outline-secondary" onClick={handleShow}>
         +
             </Button>
 
